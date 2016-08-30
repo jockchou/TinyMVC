@@ -30,5 +30,8 @@ Listening on http://localhost:8080
 在浏览器地址栏输入地址:`http://localhost:8080`，出现以下内容说明运行成功
 ![logo](./TinyMVC.png)
 
-## 5. 联系我 ##
+## 5. 开发 ##
+在浏览器地址栏输入地址:`http://localhost:8080/index.php?c=hello&m=greeting`观察输出页面，并阅读`App`目录下的MVC三个文件夹中的代码
+
+## 6. 联系我 ##
 你可以发邮件到：`jockchou@qq.com`.
