@@ -33,5 +33,41 @@ Listening on http://localhost:8080
 ## 5. 开发 ##
 在浏览器地址栏输入地址:`http://localhost:8080/index.php?c=hello&m=greeting`观察输出页面，并阅读`App`目录下的MVC三个文件夹中的代码
 
+```
+.
+├── App
+│   ├── Controller
+│   │   ├── DefaultController.php
+│   │   └── HelloController.php
+│   ├── Model
+│   │   └── UserModel.php
+│   └── View
+│       ├── 404.php
+│       ├── Default
+│       │   └── index.php
+│       └── Hello
+│           └── greeting.php
+├── Config
+│   ├── dev
+│   │   └── database.php
+│   └── prd
+│       └── database.php
+├── Core
+│   ├── Controller.php
+│   ├── Model.php
+│   └── Template.php
+├── LICENSE
+├── logo.png
+├── README.md
+├── TinyMVC.png
+├── tiny.sql
+└── Web
+    ├── css
+    │   └── normalize.css
+    ├── favicon.ico
+    ├── images
+    │   └── logo.png
+    └── index.php
+```
 ## 6. 联系我 ##
 你可以发邮件到：`jockchou@qq.com`.

@@ -12,7 +12,7 @@ class Template
 
     public function set($name, $value)
     {
-        if (is_object($value)) {
+        if (is_object($value) && method_exists($value, 'fill')) {
             $this->vars[$name] = $value->fill();
         } else {
             $this->vars[$name] = $value;
