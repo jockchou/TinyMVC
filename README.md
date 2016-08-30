@@ -13,7 +13,7 @@ $config['default']['password'] = '123456';
 ```
 
 ## 3. 启动PHP内置服务器 ##
-进入到`/Web/index.php`此文件所在目录，`index.php`是框架入口文件，执行以下命令启动php内置服务器
+进入到`/Web/index.php`文件所在目录，`index.php`是框架入口文件，在`Web`目录执行以下命令启动php内置服务器
 ```
 $ php -S localhost:8080
 PHP 5.6.16 Development Server started at Tue Aug 30 13:53:56 2016
