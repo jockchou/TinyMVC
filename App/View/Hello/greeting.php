@@ -38,7 +38,7 @@
 
     <div id="main">
         <p id="content">
-            <?php echo $words; ?>, <?php echo $user['username']; ?>!
+            Hello World, I'm <?php echo $user['username']; ?>!
         </p>
 
         <p id="comment">

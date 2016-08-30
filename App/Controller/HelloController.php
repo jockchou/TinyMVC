@@ -5,11 +5,10 @@ class HelloController extends Controller
     public function greetingAction()
     {
         $userModel = $this->loadModel('UserModel');
-        $userRow = $userModel->getUserByName('JockChou');
+        $user = $userModel->getUserByName('Tiny');
 
-        $this->assign('title', 'TinyMVC framework');
-        $this->assign('words', 'Hello World');
-        $this->assign('user', $userRow);
+        $this->assign('title', 'Hello World');
+        $this->assign('user', $user);
 
         $this->render('Hello\greeting');
     }
