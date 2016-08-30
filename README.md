@@ -35,39 +35,26 @@ Listening on http://localhost:8080
 
 ```
 .
-├── App
-│   ├── Controller
-│   │   ├── DefaultController.php
-│   │   └── HelloController.php
-│   ├── Model
-│   │   └── UserModel.php
-│   └── View
-│       ├── 404.php
-│       ├── Default
-│       │   └── index.php
-│       └── Hello
-│           └── greeting.php
-├── Config
+├── App                            ##业务逻辑实现，MVC
+│   ├── Controller                 ##控制器
+│   │   └── DefaultController.php  ##默认控制器
+│   ├── Model                      ##模型
+│   └── View                       ##视图
+│       └── 404.php
+├── Config                         ##配置文件目录
 │   ├── dev
-│   │   └── database.php
 │   └── prd
-│       └── database.php
-├── Core
+├── Core                           ##框架核心文件
 │   ├── Controller.php
 │   ├── Model.php
 │   └── Template.php
 ├── LICENSE
-├── logo.png
 ├── README.md
-├── TinyMVC.png
-├── tiny.sql
-└── Web
-    ├── css
-    │   └── normalize.css
+└── Web                            ##网站根目录
+    ├── css                        ##css文件目录
     ├── favicon.ico
-    ├── images
-    │   └── logo.png
-    └── index.php
+    ├── images                     ##图片目录
+    └── index.php                  ##框架入口
 ```
 ## 6. 联系我 ##
 你可以发邮件到：`jockchou@qq.com`.
