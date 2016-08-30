@@ -10,6 +10,6 @@
 <p>
     TinyMVC is created by <i><?php echo $user['username']; ?></i>,
     you can email <strong><?php echo $user['email'] ?></strong>.
-</>
+</p>
 </body>
 </html>
