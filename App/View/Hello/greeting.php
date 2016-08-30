@@ -42,7 +42,7 @@
         </p>
 
         <p id="comment">
-            TinyMVC is created by <i>JockChou</i>, you can email <strong>jockchou@qq.com</strong>.
+            <?php echo $user['birthday']; ?> was born in China.
         </p>
     </div>
 </div>
