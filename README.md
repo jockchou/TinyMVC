@@ -30,3 +30,6 @@ Welcome to use TinyMVC framework!
 TinyMVC is created by JockChou, you can email jockchou@qq.com.
 
 ```
+
+## 5. 联系我 ##
+你可以发邮件到：`jockchou@qq.com`.
