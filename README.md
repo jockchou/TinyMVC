@@ -52,8 +52,9 @@ Listening on http://localhost:8080
 ├── README.md
 └── Web                            ##网站根目录
     ├── css                        ##css文件目录
-    ├── favicon.ico
+    ├── js                         ##js文件目录
     ├── images                     ##图片目录
+	├── favicon.ico 
     └── index.php                  ##框架入口
 ```
 ## 6. 联系我 ##
