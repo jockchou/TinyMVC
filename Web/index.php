@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set("PRC");
 
-define('ROOT_PATH', __DIR__ . DIRECTORY_SEPARATOR);
+define('WEB_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 define('APP_PATH', realpath('../App') . DIRECTORY_SEPARATOR);
 define('CORE_PATH', realpath('../Core') . DIRECTORY_SEPARATOR);
 define('C_PATH', realpath('../App/Controller') . DIRECTORY_SEPARATOR);
