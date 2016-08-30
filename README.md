@@ -1,5 +1,5 @@
 # TinyMVC
-TinyMVC is a small php mvc framework
+TinyMVC is a small PHP MVC framework
 ----------
 ## 1. 导入数据库 ##
 将tiny.sql导入你的MySQL数据库中
