@@ -1,8 +1,9 @@
-# TinyMVC
-----------
-
 ![logo](./logo.png)
+
+# TinyMVC
+
 TinyMVC is a small PHP MVC framework
+
 ----------
 
 ## 1. 导入数据库 ##
@@ -27,7 +28,7 @@ Listening on http://localhost:8080
 
 ## 4. 在浏览器中预览 ##
 在浏览器地址栏输入地址:`http://localhost:8080`，出现以下内容说明运行成功
-![logo](./logo.png)
+![logo](./TinyMVC.png)
 
 ## 5. 联系我 ##
 你可以发邮件到：`jockchou@qq.com`.
