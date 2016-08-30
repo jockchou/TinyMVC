@@ -2,8 +2,8 @@
 
 class Template
 {
-    private $file;
-    private $vars;
+    protected $file;
+    protected $vars;
 
     function __construct($file)
     {

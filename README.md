@@ -1,2 +1,2 @@
 # TinyMVC
-A very small php mvc framework
+TinyMVC is a small php mvc framework
