@@ -1,6 +1,10 @@
 # TinyMVC
+----------
+
+![logo](./logo.png)
 TinyMVC is a small PHP MVC framework
 ----------
+
 ## 1. 导入数据库 ##
 将tiny.sql导入你的MySQL数据库中
 
@@ -23,13 +27,7 @@ Listening on http://localhost:8080
 
 ## 4. 在浏览器中预览 ##
 在浏览器地址栏输入地址:`http://localhost:8080`，出现以下内容说明运行成功
-
-```
-Welcome to use TinyMVC framework!
-
-TinyMVC is created by JockChou, you can email jockchou@qq.com.
-
-```
+![logo](./logo.png)
 
 ## 5. 联系我 ##
 你可以发邮件到：`jockchou@qq.com`.
