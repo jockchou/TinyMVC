@@ -38,18 +38,22 @@ require_once($baseControllerClassFile);
 //load Model class file
 require_once($baseModelClassFile);
 
-//404 page
-if (!file_exists($controllerClassFile)) {
-    Controller::show404();
+if (file_exists($controllerClassFile)) {
+    //load user controller class file
+    require_once($controllerClassFile);
+
+    if (method_exists($controllerClass, $controllerMethod)) {
+        //new Controller Object
+        $controller = new $controllerClass();
+
+        //run controller action method
+        if ($controller->$controllerMethod() !== false) {
+            $controller->render($c . DIRECTORY_SEPARATOR . $m);
+        }
+        exit(0);
+    }
 }
 
-//load user controller class file
-require_once($controllerClassFile);
+Controller::show404();
 
-//new Controller Object
-$controller = new $controllerClass();
 
-//run controller action method
-if ($controller->$controllerMethod() !== false) {
-    $controller->render($c . DIRECTORY_SEPARATOR . $m);
-}
