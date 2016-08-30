@@ -2,6 +2,13 @@
 date_default_timezone_set("PRC");
 
 define('ENV', 'dev');
+if (ENV == 'dev') {
+    error_reporting(E_ALL);
+} elseif (ENV == 'prd') {
+    error_reporting(0);
+} else {
+    error_reporting(E_ERROR | E_WARNING | E_PARSE);
+}
 
 define('WEB_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 define('APP_PATH', realpath('../App') . DIRECTORY_SEPARATOR);
@@ -30,6 +37,11 @@ require_once($baseControllerClassFile);
 
 //load Model class file
 require_once($baseModelClassFile);
+
+//404 page
+if (!file_exists($controllerClassFile)) {
+    Controller::show404();
+}
 
 //load user controller class file
 require_once($controllerClassFile);

@@ -70,4 +70,14 @@ class Controller
 
         return false;
     }
+
+    public static function show404()
+    {
+        ob_start();
+        include(V_PATH . '404.php');
+        $contents = ob_get_contents();
+        ob_end_clean();
+        echo $contents;
+        exit(0);
+    }
 }
