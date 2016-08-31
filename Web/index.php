@@ -22,8 +22,22 @@ define('V_PATH', realpath('../App/View') . DIRECTORY_SEPARATOR);
 define('C_SUFFIX', 'Controller');
 define('M_SUFFIX', 'Action');
 
-$c = ucfirst(strtolower((isset($_GET['c']) ? $_GET['c'] : 'Default')));
-$m = strtolower((isset($_GET['m']) ? $_GET['m'] : 'index'));
+define('C_NAME', 'c');
+define('M_NAME', 'm');
+
+$c = 'Default';
+$m = 'index';
+if (isset($_SERVER['PATH_INFO'])) {
+    $pathInfo = trim($_SERVER['PATH_INFO'], "/");
+    if ($pathInfo !== '') {
+        $pathArr = explode("/", $pathInfo);
+        $c = ucfirst(strtolower($pathArr[0]));
+        $m = strtolower((isset($pathArr[1]) ? $pathArr[1] : 'index'));
+    }
+} else {
+    $c = ucfirst(strtolower((isset($_GET['C_NAME']) ? $_GET['C_NAME'] : 'Default')));
+    $m = strtolower((isset($_GET['M_NAME']) ? $_GET['M_NAME'] : 'index'));
+}
 
 $controllerClass = $c . C_SUFFIX;
 $controllerMethod = $m . M_SUFFIX;

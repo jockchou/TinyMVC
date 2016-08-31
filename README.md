@@ -6,32 +6,31 @@ TinyMVC is a small PHP MVC framework
 
 ----------
 
-## 1. 导入数据库 ##
+# 一. 如何快速运行TinyMVC
+
+下载或者git clone TinyMVC源码到本地，进入到`Web/index.php`文件所在目录，`index.php`是框架入口文件，在`Web`目录执行以下命令启动php内置服务器
+```
+$ php -S localhost:8080
+PHP 5.6.16 Development Server started at Tue Aug 30 13:53:56 2016
+Listening on http://localhost:8080
+```
+此时服务器已经监听8080端口，在浏览器地址栏输入地址:`http://localhost:8080`，出现以下内容说明运行成功
+![logo](./TinyMVC.png)
+# 二. 开发HelloWorld
+
+#### 1. 导入数据库
 将tiny.sql导入你的MySQL数据库中
 
-## 2. 修改数据库配置 ##
+#### 2. 修改配置
 将`/Config/dev/database.php`配置修改成你的数据库信息
 ```
 $config['default']['dsn'] = 'mysql:host=localhost;port=3306;dbname=tiny;charset=utf8mb4';
 $config['default']['username'] = 'root';
 $config['default']['password'] = '123456';
 ```
+在浏览器地址栏输入地址:`http://localhost:8080/index.php?c=hello&m=greeting`观察输出页面。Tiny同时支持PATH_INFO方式，你可以这样访问helloworld程序`http://localhost:8080/index.php/hello/greeting`
 
-## 3. 启动PHP内置服务器 ##
-进入到`/Web/index.php`文件所在目录，`index.php`是框架入口文件，在`Web`目录执行以下命令启动php内置服务器
-```
-$ php -S localhost:8080
-PHP 5.6.16 Development Server started at Tue Aug 30 13:53:56 2016
-Listening on http://localhost:8080
-```
-此时服务器已经监听8080端口
-
-## 4. 在浏览器中预览 ##
-在浏览器地址栏输入地址:`http://localhost:8080`，出现以下内容说明运行成功
-![logo](./TinyMVC.png)
-
-## 5. 开发 ##
-在浏览器地址栏输入地址:`http://localhost:8080/index.php?c=hello&m=greeting`观察输出页面，并阅读`App`目录下的MVC三个文件夹中的代码
+#### 3. 目录结构
 
 ```
 .
@@ -57,5 +56,6 @@ Listening on http://localhost:8080
 	├── favicon.ico 
     └── index.php                  ##框架入口
 ```
-## 6. 联系我 ##
-你可以发邮件到：`jockchou@qq.com`.
+
+# 三. 联系我 ##
+你可以发邮件到：`jockchou@qq.com`
