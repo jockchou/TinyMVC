@@ -10,9 +10,11 @@ TinyMVC is a small PHP MVC framework
 
 下载或者git clone TinyMVC源码到本地，进入到`Web/index.php`文件所在目录，`index.php`是框架入口文件，在`Web`目录执行以下命令启动php内置服务器
 ```
-PHP 5.6.16 Development Server started at Wed Aug 31 16:22:24 2016
+$ php -S localhost:8080
+PHP 5.6.16 Development Server started at Mon Sep 12 17:12:40 2016
 Listening on http://localhost:8080
 Document root is D:\gitroot\TinyMVC\Web
+Press Ctrl-C to quit.
 ```
 此时服务器已经监听8080端口，根目录是`Web`目录，在浏览器地址栏输入地址:`http://localhost:8080`，出现以下内容说明运行成功
 ![logo](./TinyMVC.png)
