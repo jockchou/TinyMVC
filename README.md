@@ -30,7 +30,7 @@ $config['default']['dsn'] = 'mysql:host=localhost;port=3306;dbname=tiny;charset=
 $config['default']['username'] = 'root';
 $config['default']['password'] = '123456';
 ```
-在浏览器地址栏输入地址:`http://localhost:8080/index.php?c=hello&m=greeting`观察输出页面。Tiny同时支持PATH_INFO方式，你可以这样访问helloworld程序`http://localhost:8080/index.php/hello/greeting`
+在浏览器地址栏输入地址:`http://localhost:8080/index.php?c=hello&m=greeting`观察输出页面。Tiny同时支持PATH_INFO方式，你可以这样访问helloworld程序`http://localhost:8080/hello/greeting`
 
 #### 3. 目录结构
 
