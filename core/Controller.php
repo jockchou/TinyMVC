@@ -53,6 +53,7 @@ class Controller
         }
 
         $viewFile = V_PATH . $viewName . '.php';
+
         if (file_exists($viewFile)) {
             $this->template = new Template($viewFile);
             if (is_array($viewData) && count($viewData) > 0) {

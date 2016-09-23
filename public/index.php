@@ -17,9 +17,9 @@ define('C_PATH', realpath('../application/controller') . APP_DS);
 define('M_PATH', realpath('../application/model') . APP_DS);
 define('V_PATH', realpath('../application/view') . APP_DS);
 define('NS_CTRL', "TinyMVC\\App\\Controller\\");
-define('NS_MODEL', "TinyMVC\\App\\MODEL\\");
+define('NS_MODEL', "TinyMVC\\App\\Model\\");
 
-define('ENV', 'dev');
+define('ENV', 'prd');
 define('C_SUFFIX', 'Controller');
 define('M_SUFFIX', 'Action');
 define('C_NAME', 'c');
@@ -39,9 +39,10 @@ $c = 'Default';
 $m = 'index';
 
 if (isset($_SERVER['PATH_INFO'])) {
-    $pathInfo = trim($_SERVER['PATH_INFO'], "/");
+    $pathInfo = trim($_SERVER['PATH_INFO'], '/');
+
     if ($pathInfo !== '') {
-        $pathArr = explode("/", $pathInfo);
+        $pathArr = explode('/', $pathInfo);
         $c = ucfirst(strtolower($pathArr[0]));
         $m = strtolower((isset($pathArr[1]) ? $pathArr[1] : 'index'));
     }

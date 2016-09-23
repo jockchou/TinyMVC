@@ -24,7 +24,8 @@
     "autoload": {
         "psr-4": {
             "TinyMVC\\Core\\": "core/",
-            "TinyMVC\\App\\": "application/"
+            "TinyMVC\\App\\Controller\\": "application/controller",
+            "TinyMVC\\App\\Model\\": "application/model"
         }
     }
 }
