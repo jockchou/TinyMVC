@@ -8,7 +8,7 @@
         "micro",
         "framework"
     ],
-    "type": "library",
+    "type": "project",
     "license": "Apache-2.0",
     "authors": [
         {
