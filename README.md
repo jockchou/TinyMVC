@@ -91,6 +91,35 @@ open ***http://localhost:9000/hello/greeting*** on your browser
     └── logs
 ```
 
+## Nginx
+```
+server {
+        listen       80;
+        server_name  tinymvc.anole.me;
+        root         /var/tinymvc/public;
+        charset      utf8;
+
+        access_log  logs/tinymvc.access.log  main;
+        error_log  logs/tinymvc.error.log;
+
+        location / {
+            try_files $uri /index.php$is_args$args;
+        }
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        location ~ ^/index\.php(/|$) {
+            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_index  index.php;
+            fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include        fastcgi_params;
+        }
+
+        location ~ \.php$ {
+            return 404;
+        }
+}
+```
 ## Contact
 
 jockchou@qq.com
