@@ -1,4 +1,5 @@
 !.gitignore
 .idea/*
 vendor/*
+runtime/logs/*.log
 

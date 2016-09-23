@@ -19,7 +19,7 @@ define('V_PATH', realpath('../application/view') . APP_DS);
 define('NS_CTRL', "TinyMVC\\App\\Controller\\");
 define('NS_MODEL', "TinyMVC\\App\\MODEL\\");
 
-define('ENV', 'prd');
+define('ENV', 'dev');
 define('C_SUFFIX', 'Controller');
 define('M_SUFFIX', 'Action');
 define('C_NAME', 'c');
@@ -53,7 +53,7 @@ if (isset($_SERVER['PATH_INFO'])) {
 $controllerClass = NS_CTRL . $c . C_SUFFIX;
 $controllerMethod = $m . M_SUFFIX;
 
-if (class_exists($controllerClass) && method_exists($controllerClass, $controllerMethod)) {
+if (class_exists($controllerClass, true) && method_exists($controllerClass, $controllerMethod)) {
     try {
         $controller = new $controllerClass();
         if ($controller->$controllerMethod() !== false) {
