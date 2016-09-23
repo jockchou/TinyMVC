@@ -20,5 +20,11 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "TinyMVC\\Core\\": "core/",
+            "TinyMVC\\App\\": "application/"
+        }
     }
 }

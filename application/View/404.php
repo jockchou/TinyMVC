@@ -9,8 +9,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
         #wrap {
-            width: 680px;
-            margin: 100px auto;
+            margin: 50px auto;
         }
 
         #logo {
@@ -19,15 +18,17 @@
             text-indent: -90000px;
         }
 
-        #main {
+        #content h2 {
             font-size: 28px;
             color: #333;
             text-align: center;
         }
 
-        #comment {
-            color: #888;
+        #errorWrap {
             font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -36,11 +37,13 @@
     <h1 id="logo">404</h1>
 
     <div id="main">
-        <p id="content">404 Page Not Found!</p>
+        <div id="content">
+            <h2>404 Page Not Found!</h2>
 
-        <p id="comment">
-            The page you requested was not found.
-        </p>
+            <div id="errorWrap">
+                The page you requested was not found.
+            </div>
+        </div>
     </div>
 </div>
 </body>
