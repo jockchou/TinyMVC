@@ -14,9 +14,13 @@ class Model
 
     function __construct()
     {
-        $this->config = require CFG_PATH . ENV . APP_DS . "database.php";
+        $this->config = require CFG_PATH . ENV . "/database.php";
     }
 
+    /**
+     * @param string $name
+     * @return null|\PDO
+     */
     public function loadDB($name = 'default')
     {
         if ($this->pdo != null) {
@@ -28,7 +32,7 @@ class Model
 
                 return $this->pdo;
             } catch (\PDOException $e) {
-                throw new TinyException("DB connection failed: " . $e->getMessage());
+                throw new FrameworkException("Database connection failed: " . $e->getMessage());
             }
         }
     }

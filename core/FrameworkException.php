@@ -9,6 +9,7 @@ namespace TinyMVC\Core;
 
 use RuntimeException;
 
-class TinyException extends RuntimeException
+class FrameworkException extends RuntimeException
 {
+    
 }

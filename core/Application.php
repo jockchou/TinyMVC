@@ -28,18 +28,19 @@ class Application
         if (!empty($this->pathInfo)) {
             $pathArr = explode('/', $this->pathInfo);
             $action = strtolower((isset($pathArr[1]) ? $pathArr[1] : 'index'));
-            $clazz = ucfirst(strtolower($pathArr[0]));
-            $controllerClass = NS_CTRL . $clazz . C_SUFFIX;
+            
+            $controller = ucfirst(strtolower($pathArr[0]));
+            $controllerClass = NS_CTRL . $controller . C_SUFFIX;
             $controllerMethod = $action . M_SUFFIX;
 
             if (class_exists($controllerClass) && method_exists($controllerClass, $controllerMethod)) {
                 try {
-                    $controller = new $controllerClass();
-                    if ($controller->$controllerMethod() !== false) {
-                        $controller->render(strtolower($clazz) . APP_DS . strtolower($action));
+                    $controllerObject = new $controllerClass();
+                    if ($controllerObject->$controllerMethod() !== false) {
+                        $controllerObject->render(strtolower($controller) . APP_DS . $action);
                     }
-                } catch (TinyException $tinyError) {
-                    Controller::show500($tinyError);
+                } catch (FrameworkException $e) {
+                    Controller::show500($e);
                 }
             } else {
                 Controller::show404();

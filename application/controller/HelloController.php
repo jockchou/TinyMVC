@@ -23,6 +23,6 @@ class HelloController extends Controller
         $this->assign('title', 'Hello World');
         $this->assign('user', $user);
 
-        //$this->render('hello/greeting');
+        $this->render('hello/greeting');
     }
 }

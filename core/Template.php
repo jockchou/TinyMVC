@@ -7,16 +7,27 @@
  */
 namespace TinyMVC\Core;
 
+/**
+ * Class Template
+ * @package TinyMVC\Core
+ */
 class Template
 {
     protected $file;
     protected $vars;
 
+    /**
+     * @param string $file
+     */
     function __construct($file)
     {
         $this->file = $file;
     }
 
+    /**
+     * @param $name
+     * @param $value
+     */
     public function set($name, $value)
     {
         if (is_object($value) && method_exists($value, 'fill')) {

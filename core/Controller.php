@@ -7,6 +7,8 @@
  */
 namespace TinyMVC\Core;
 
+use TinyMVC\Core\FrameworkException;
+
 /**
  * Class Controller
  * @package TinyMVC\Core
@@ -51,7 +53,7 @@ class Controller
         if ($this->isRendered) {
             return false;
         }
-        
+
         $viewFile = str_replace('\\', '/', V_PATH . rtrim($viewName, '/') . '.php');
 
         if (file_exists($viewFile)) {
@@ -64,7 +66,7 @@ class Controller
             }
             echo $this->template->fill();
         } else {
-            throw new TinyException("Template file " . $viewFile . " is not exists!");
+            throw new FrameworkException("Template file " . $viewFile . " is not exists!");
         }
         $this->isRendered = true;
 
@@ -89,7 +91,7 @@ class Controller
 
             return $model;
         } else {
-            throw new TinyException("Model Class " . $modelClass . " is not exists!");
+            throw new FrameworkException("Model Class " . $modelClass . " is not exists!");
         }
 
         return false;
