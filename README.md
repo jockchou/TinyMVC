@@ -49,28 +49,49 @@ open ***http://localhost:9000/index.php?c=hello&m=greeting*** on your browser, Y
 
 ```
 .
-├── application                    ##业务逻辑实现，MVC
-│   ├── controller                 ##控制器
-│   │   └── DefaultController.php  ##默认控制器
-│   ├── model                      ##模型
-│   └── view                       ##视图
-│       ├── 404.php
-│       └── 500.php
-├── config                         ##配置文件目录
-│   ├── dev
-│   └── prd
-├── core                           ##框架核心文件
-│   ├── Controller.php
-│   ├── Model.php
-│   └── Template.php
-├── LICENSE
-├── README.md
-└── public                         ##网站根目录
-    ├── css                        ##css文件目录
-    ├── js                         ##js文件目录
-    ├── images                     ##图片目录
-	├── favicon.ico 
-    └── index.php                  ##框架入口
+|-- LICENSE
+|-- README.md
+|-- application
+|   |-- controller
+|   |   |-- DefaultController.php
+|   |   `-- HelloController.php
+|   |-- model
+|   |   `-- UserModel.php
+|   `-- view
+|       |-- 404.php
+|       |-- 500.php
+|       |-- Default
+|       |   `-- index.php
+|       `-- Hello
+|           `-- greeting.php
+|-- composer.json
+|-- composer.lock
+|-- config
+|   |-- dev
+|   |   `-- database.php
+|   `-- prd
+|       `-- database.php
+|-- core
+|   |-- Controller.php
+|   |-- Model.php
+|   |-- Template.php
+|   `-- TinyException.php
+|-- public
+|   |-- css
+|   |   `-- normalize.css
+|   |-- favicon.ico
+|   |-- images
+|   |   `-- logo.png
+|   |-- index.php
+|   `-- js
+|       `-- zepto.min.js
+|-- resource
+|   |-- TinyMVC.png
+|   |-- logo.png
+|   `-- tiny.sql
+`-- runtime
+    `-- logs
+        `-- error.log
 ```
 
 ## Contact
