@@ -14,7 +14,7 @@ TinyMVC is a small PHP MVC framework
 It's recommended that you use [Composer](https://getcomposer.org/) to install this framework.
 
 ```bash
-$ composer require jockchou/tinymvc
+composer create-project jockchou/tinymvc
 ```
 
 ## How to run
