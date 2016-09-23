@@ -15,6 +15,8 @@ It's recommended that you use [Composer](https://getcomposer.org/) to install th
 
 ```bash
 composer create-project jockchou/tinymvc
+cd tinymvc
+composer install
 ```
 
 ## How to run
