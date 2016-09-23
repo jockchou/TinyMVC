@@ -1,35 +1,41 @@
 ![logo](./resource/logo.png)
 
-# TinyMVC
+## TinyMVC PHP Framework
+TinyMVC is a small PHP MVC framework
+
 [![Latest Stable Version](https://poser.pugx.org/jockchou/tinymvc/v/stable)](https://packagist.org/packages/jockchou/tinymvc)
 [![Total Downloads](https://poser.pugx.org/jockchou/tinymvc/downloads)](https://packagist.org/packages/jockchou/tinymvc)
 [![Latest Unstable Version](https://poser.pugx.org/jockchou/tinymvc/v/unstable)](https://packagist.org/packages/jockchou/tinymvc)
 [![License](https://poser.pugx.org/jockchou/tinymvc/license)](https://packagist.org/packages/jockchou/tinymvc)
 
-TinyMVC is a small PHP MVC framework
 
-----------
+## Installation
 
-# 一. 如何快速运行TinyMVC
+It's recommended that you use [Composer](https://getcomposer.org/) to install this framework.
 
-下载或者git clone TinyMVC源码到本地，进入到public/index.php文件所在目录，`index.php`是框架入口文件，在`public`目录执行以下命令启动php内置服务器
+```bash
+$ composer require jockchou/tinymvc
+```
 
+## How to run
 
-> $ php -S localhost:8080  
-> PHP 5.6.16 Development Server started at Fri Sep 23 14:58:22 2016  
-> Listening on http://localhost:8080  
-> Document root is D:\gitroot\TinyMVC\public  
-> Press Ctrl-C to quit.  
+```bash
+$ cd /d/gitroot/TinyMVC/public
+$ php -S localhost:9000
+PHP 5.6.16 Development Server started at Fri Sep 23 16:33:52 2016
+Listening on http://localhost:9000
+Document root is D:\gitroot\TinyMVC\public
+Press Ctrl-C to quit.
+```
 
-此时服务器已经监听8080端口，根目录是`public`目录，在浏览器地址栏输入地址:http://localhost:8080，出现以下内容说明运行成功
+## Browse
+Open browser, enter http://localhost:9000 in the address bar
+
 ![logo](./resource/TinyMVC.png)
-# 二. 开发HelloWorld
 
-#### 1. 导入数据库
-将resource/tiny.sql导入你的MySQL数据库中
+## HelloWorld
 
-#### 2. 修改配置
-将/config/dev/database.php配置修改成你的数据库信息
+import resource/tiny.sql file to your MySQL database, Modify /config/dev/database.php
 
 ```
 $config['default']['dsn'] = 'mysql:host=localhost;port=3306;dbname=tiny;charset=utf8mb4';
@@ -37,10 +43,11 @@ $config['default']['username'] = 'root';
 $config['default']['password'] = '123456';
 ```
 
-在浏览器地址栏输入地址:http://localhost:8080/index.php?c=hello&m=greeting观察输出页面。你可以这样访问helloworld程序http://localhost:8080/hello/greeting
+open http://localhost:8080/index.php?c=hello&m=greeting on your browser, You can also use http://localhost:8080/hello/greeting.
 
-#### 3. 目录结构
-<pre>
+## Structure
+
+```
 .
 ├── application                    ##业务逻辑实现，MVC
 │   ├── controller                 ##控制器
@@ -64,6 +71,8 @@ $config['default']['password'] = '123456';
     ├── images                     ##图片目录
 	├── favicon.ico 
     └── index.php                  ##框架入口
-</pre>
-# 三. 联系我 ##
-你可以发邮件到：jockchou@qq.com
+```
+
+## Contact
+
+jockchou@qq.com
