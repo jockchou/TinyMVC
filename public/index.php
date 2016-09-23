@@ -19,7 +19,7 @@ define('V_PATH', realpath('../application/view') . APP_DS);
 define('NS_CTRL', "TinyMVC\\App\\Controller\\");
 define('NS_MODEL', "TinyMVC\\App\\MODEL\\");
 
-define('ENV', 'dev');
+define('ENV', 'prd');
 define('C_SUFFIX', 'Controller');
 define('M_SUFFIX', 'Action');
 define('C_NAME', 'c');
