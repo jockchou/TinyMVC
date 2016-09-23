@@ -28,7 +28,7 @@ class Application
         if (!empty($this->pathInfo)) {
             $pathArr = explode('/', $this->pathInfo);
             $action = strtolower((isset($pathArr[1]) ? $pathArr[1] : 'index'));
-            
+
             $controller = ucfirst(strtolower($pathArr[0]));
             $controllerClass = NS_CTRL . $controller . C_SUFFIX;
             $controllerMethod = $action . M_SUFFIX;
