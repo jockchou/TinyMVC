@@ -1,8 +1,16 @@
 <?php
+/**
+ * @author    JockChou (http://jockchou.github.io)
+ * @link      https://github.com/jockchou/TinyMVC
+ * @copyright Copyright (c) 2016 JockChou
+ * @license   https://raw.githubusercontent.com/jockchou/TinyMVC/master/LICENSE (Apache License)
+ */
+namespace TinyMVC\Core;
 
-//load Template class file
-require_once(CORE_PATH . 'Template.php');
-
+/**
+ * Class Controller
+ * @package TinyMVC\Core
+ */
 class Controller
 {
     protected $template;
@@ -19,6 +27,10 @@ class Controller
     }
 
 
+    /**
+     * @param string $name
+     * @param mixed $value
+     */
     public function assign($name, $value)
     {
         if (is_object($value)) {
@@ -28,6 +40,12 @@ class Controller
         }
     }
 
+    /**
+     * @param string $viewName
+     * @param null $viewData
+     * @return bool
+     * @throws Exception
+     */
     public function render($viewName, $viewData = null)
     {
         if ($this->isRendered) {
@@ -45,36 +63,51 @@ class Controller
             }
             echo $this->template->fill();
         } else {
-            throw new Exception("Template file " . $viewFile . " is not exists!");
+            throw new TinyException("Template file " . $viewFile . " is not exists!");
         }
         $this->isRendered = true;
 
         return false;
     }
 
+    /**
+     * @param string $modelName
+     * @return bool
+     * @throws Exception
+     */
     public function loadModel($modelName)
     {
         if (isset($this->modelMap[$modelName])) {
             return $this->modelMap[$modelName];
         }
-        $modelFile = M_PATH . $modelName . '.php';
-        if (file_exists($modelFile)) {
-            require_once($modelFile);
-            $model = new $modelName;
+        $modelClass = NS_MODEL . $modelName;
+
+        if (class_exists($modelClass)) {
+            $model = new $modelClass();
             $this->modelMap[$modelName] = $model;
 
             return $model;
         } else {
-            throw new Exception("Model file " . $modelFile . " is not exists!");
+            throw new TinyException("Model Class " . $modelClass . " is not exists!");
         }
 
         return false;
     }
 
-    public static function show404()
+    public static function show404($message = null)
     {
         ob_start();
         include(V_PATH . '404.php');
+        $contents = ob_get_contents();
+        ob_end_clean();
+        echo $contents;
+        exit(0);
+    }
+
+    public static function show500($message)
+    {
+        ob_start();
+        include(V_PATH . '500.php');
         $contents = ob_get_contents();
         ob_end_clean();
         echo $contents;
