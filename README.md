@@ -29,13 +29,13 @@ Press Ctrl-C to quit.
 ```
 
 ## Browse
-Open browser, enter http://localhost:9000 in the address bar
+Open browser, enter ***http://localhost:9000*** in the address bar
 
 ![logo](./resource/TinyMVC.png)
 
 ## HelloWorld
 
-import resource/tiny.sql file to your MySQL database, Modify /config/dev/database.php
+import ***resource/tiny.sql*** file to your MySQL database, Modify ***/config/dev/database.php***
 
 ```
 $config['default']['dsn'] = 'mysql:host=localhost;port=3306;dbname=tiny;charset=utf8mb4';
@@ -43,7 +43,7 @@ $config['default']['username'] = 'root';
 $config['default']['password'] = '123456';
 ```
 
-open http://localhost:9000/index.php?c=hello&m=greeting on your browser, You can also use http://localhost:9000/hello/greeting.
+open ***http://localhost:9000/index.php?c=hello&m=greeting*** on your browser, You can also use ***http://localhost:9000/hello/greeting***
 
 ## Structure
 
