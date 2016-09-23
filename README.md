@@ -49,7 +49,7 @@ $config['default']['password'] = '123456';
 │   ├── model                      ##模型
 │   └── view                       ##视图
 │       ├── 404.php
-│   		└── 500.php
+│       └── 500.php
 ├── config                         ##配置文件目录
 │   ├── dev
 │   └── prd
