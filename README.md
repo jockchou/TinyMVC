@@ -51,49 +51,47 @@ open ***http://localhost:9000/hello/greeting*** on your browser
 
 ```
 .
-|-- LICENSE
-|-- README.md
-|-- application
-|   |-- controller
-|   |   |-- DefaultController.php
-|   |   `-- HelloController.php
-|   |-- model
-|   |   `-- UserModel.php
-|   `-- view
-|       |-- 404.php
-|       |-- 500.php
-|       |-- Default
-|       |   `-- index.php
-|       `-- Hello
-|           `-- greeting.php
-|-- composer.json
-|-- composer.lock
-|-- config
-|   |-- dev
-|   |   `-- database.php
-|   `-- prd
-|       `-- database.php
-|-- core
-|   |-- Controller.php
-|   |-- Model.php
-|   |-- Template.php
-|   `-- TinyException.php
-|-- public
-|   |-- css
-|   |   `-- normalize.css
-|   |-- favicon.ico
-|   |-- images
-|   |   `-- logo.png
-|   |-- index.php
-|   `-- js
-|       `-- zepto.min.js
-|-- resource
-|   |-- TinyMVC.png
-|   |-- logo.png
-|   `-- tiny.sql
-`-- runtime
-    `-- logs
-        `-- error.log
+├── application
+│   ├── controller
+│   │   └── HelloController.php
+│   ├── model
+│   │   └── UserModel.php
+│   └── view
+│       ├── 404.php
+│       ├── 500.php
+│       ├── Hello
+│       │   └── greeting.php
+│       └── welcome.php
+├── composer.json
+├── composer.lock
+├── config
+│   ├── dev
+│   │   └── database.php
+│   └── prd
+│       └── database.php
+├── core
+│   ├── Application.php
+│   ├── Controller.php
+│   ├── FrameworkException.php
+│   ├── Model.php
+│   └── Template.php
+├── LICENSE
+├── public
+│   ├── css
+│   │   └── normalize.css
+│   ├── favicon.ico
+│   ├── images
+│   │   └── logo.png
+│   ├── index.php
+│   └── js
+│       └── zepto.min.js
+├── README.md
+├── resource
+│   ├── logo.png
+│   ├── TinyMVC.png
+│   └── tiny.sql
+└── runtime
+    └── logs
 ```
 
 ## Contact
