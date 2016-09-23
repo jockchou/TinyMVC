@@ -3,10 +3,11 @@
 ## TinyMVC PHP Framework
 TinyMVC is a small PHP MVC framework
 
-[![Latest Stable Version](https://poser.pugx.org/jockchou/tinymvc/v/stable)](https://packagist.org/packages/jockchou/tinymvc)
-[![Total Downloads](https://poser.pugx.org/jockchou/tinymvc/downloads)](https://packagist.org/packages/jockchou/tinymvc)
-[![Latest Unstable Version](https://poser.pugx.org/jockchou/tinymvc/v/unstable)](https://packagist.org/packages/jockchou/tinymvc)
-[![License](https://poser.pugx.org/jockchou/tinymvc/license)](https://packagist.org/packages/jockchou/tinymvc)
+[![Latest Stable Version](https://poser.pugx.org/jockchou/tinymvc/v/stable)](https://packagist.org/packages/jockchou/tinymvc#1.0.0)
+[![Total Downloads](https://poser.pugx.org/jockchou/tinymvc/downloads)](https://packagist.org/packages/jockchou/tinymvc/stats)
+[![Latest Unstable Version](https://poser.pugx.org/jockchou/tinymvc/v/unstable)](https://packagist.org/packages/jockchou/tinymvc#dev-master)
+[![License](https://poser.pugx.org/jockchou/tinymvc/license)](https://raw.githubusercontent.com/jockchou/TinyMVC/master/LICENSE)
+[![composer.lock](https://poser.pugx.org/jockchou/tinymvc/composerlock)](https://github.com/jockchou/TinyMVC/blob/master/composer.lock)
 
 
 ## Installation
