@@ -15,18 +15,15 @@ It's recommended that you use [Composer](https://getcomposer.org/) to install th
 
 ```bash
 composer create-project jockchou/tinymvc
-cd tinymvc
-composer install
 ```
 
 ## How to run
 
 ```bash
-$ cd /d/gitroot/TinyMVC/public
-$ php -S localhost:9000
-PHP 5.6.16 Development Server started at Fri Sep 23 16:33:52 2016
-Listening on http://localhost:9000
-Document root is D:\gitroot\TinyMVC\public
+[root@localhost public]# php -S localhost:9000
+PHP 7.0.11 Development Server started at Fri Sep 23 09:52:14 2016
+Listening on http://localhost:9090
+Document root is /var/tinymvc/public
 Press Ctrl-C to quit.
 ```
 
