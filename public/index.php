@@ -4,7 +4,7 @@ require_once "../vendor/autoload.php";
 use TinyMVC\Core\Application;
 
 date_default_timezone_set("PRC");
-define('ENV', 'dev');
+define('ENV', 'prd');
 define('APP_DS', "/");
 define('ROOT_PATH', str_replace('\\', '/', dirname(__DIR__)) . APP_DS);
 define('WEB_PATH', ROOT_PATH . 'public' . APP_DS);
