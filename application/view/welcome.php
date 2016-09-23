@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?php echo $title; ?></title>
+    <title>TinyMVC Framework</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
@@ -34,14 +34,14 @@
 </head>
 <body>
 <div id="wrap">
-    <h1 id="logo"><?php echo $title; ?></h1>
+    <h1 id="logo">TinyMVC Framework</h1>
 
     <div id="main">
-        <p id="content"><?php echo $content; ?></p>
+        <p id="content">Welcome to use TinyMVC framework!</p>
 
         <p id="comment">
-            TinyMVC is created by <i><?php echo $user['username']; ?></i>,
-            you can email <strong><?php echo $user['email'] ?></strong>.
+            TinyMVC is created by <i>JockChou</i>,
+            you can email <strong>jockchou@qq.com</strong>.
         </p>
     </div>
 </div>

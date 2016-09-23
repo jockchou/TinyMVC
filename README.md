@@ -45,7 +45,7 @@ $config['default']['username'] = 'root';
 $config['default']['password'] = '123456';
 ```
 
-open ***http://localhost:9000/index.php?c=hello&m=greeting*** on your browser, You can also use ***http://localhost:9000/hello/greeting***
+open ***http://localhost:9000/hello/greeting*** on your browser
 
 ## Structure
 

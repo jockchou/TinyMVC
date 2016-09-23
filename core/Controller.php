@@ -51,8 +51,8 @@ class Controller
         if ($this->isRendered) {
             return false;
         }
-
-        $viewFile = V_PATH . $viewName . '.php';
+        
+        $viewFile = str_replace('\\', '/', V_PATH . rtrim($viewName, '/') . '.php');
 
         if (file_exists($viewFile)) {
             $this->template = new Template($viewFile);
@@ -95,23 +95,28 @@ class Controller
         return false;
     }
 
-    public static function show404($message = null)
+    protected static function showPage($pageFile, $message = null)
     {
         ob_start();
-        include(V_PATH . '404.php');
+        include($pageFile);
         $contents = ob_get_contents();
         ob_end_clean();
         echo $contents;
         exit(0);
     }
 
+    public static function welcome($message = null)
+    {
+        self::showPage(V_PATH . 'welcome.php', $message);
+    }
+
+    public static function show404($message = null)
+    {
+        self::showPage(V_PATH . '404.php', $message);
+    }
+
     public static function show500($message)
     {
-        ob_start();
-        include(V_PATH . '500.php');
-        $contents = ob_get_contents();
-        ob_end_clean();
-        echo $contents;
-        exit(0);
+        self::showPage(V_PATH . '500.php', $message);
     }
 }
