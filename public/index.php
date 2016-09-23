@@ -30,6 +30,6 @@ if (ENV == 'dev') {
     ini_set('error_log', RUN_PATH . 'logs/error.log');
 }
 
-$app = new Application(isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : null);
+$app = new Application(isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : null);
 $app->run();
 

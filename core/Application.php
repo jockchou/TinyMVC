@@ -16,11 +16,11 @@ class Application
     private $pathInfo = null;
 
     /**
-     * @param string $path
+     * @param string $uri
      */
-    function __construct($path)
+    function __construct($uri)
     {
-        $this->pathInfo = trim($path, '/');
+        $this->pathInfo = trim(preg_replace("/\/+/", '/', $uri), '/');
     }
 
     public function run()
@@ -28,7 +28,7 @@ class Application
         if (!empty($this->pathInfo)) {
             $pathArr = explode('/', $this->pathInfo);
             $action = strtolower((isset($pathArr[1]) ? $pathArr[1] : 'index'));
-            
+
             $controller = ucfirst(strtolower($pathArr[0]));
             $controllerClass = NS_CTRL . $controller . C_SUFFIX;
             $controllerMethod = $action . M_SUFFIX;
