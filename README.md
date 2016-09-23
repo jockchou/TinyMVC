@@ -40,8 +40,7 @@ $config['default']['password'] = '123456';
 在浏览器地址栏输入地址:http://localhost:8080/index.php?c=hello&m=greeting观察输出页面。你可以这样访问helloworld程序http://localhost:8080/hello/greeting
 
 #### 3. 目录结构
-
-```
+<pre>
 .
 ├── application                    ##业务逻辑实现，MVC
 │   ├── controller                 ##控制器
@@ -65,7 +64,6 @@ $config['default']['password'] = '123456';
     ├── images                     ##图片目录
 	├── favicon.ico 
     └── index.php                  ##框架入口
-```
-
+</pre>
 # 三. 联系我 ##
 你可以发邮件到：jockchou@qq.com
