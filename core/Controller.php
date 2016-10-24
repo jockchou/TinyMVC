@@ -99,6 +99,9 @@ class Controller
 
     protected static function showPage($pageFile, $message = null)
     {
+        if ($message !== null) {
+            extract(array('message' => $message));
+        }
         ob_start();
         include($pageFile);
         $contents = ob_get_contents();
@@ -109,16 +112,16 @@ class Controller
 
     public static function welcome($message = null)
     {
-        self::showPage(V_PATH . 'welcome.php', $message);
+        static::showPage(V_PATH . 'welcome.php', $message);
     }
 
     public static function show404($message = null)
     {
-        self::showPage(V_PATH . '404.php', $message);
+        static::showPage(V_PATH . '404.php', $message);
     }
 
     public static function show500($message)
     {
-        self::showPage(V_PATH . '500.php', $message);
+        static::showPage(V_PATH . '500.php', $message);
     }
 }
