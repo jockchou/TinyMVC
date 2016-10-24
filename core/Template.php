@@ -39,7 +39,7 @@ class Template
 
     public function fill()
     {
-        extract($this->vars);
+        extract($this->vars, EXTR_SKIP);
         ob_start();
         include($this->file);
         $contents = ob_get_contents();

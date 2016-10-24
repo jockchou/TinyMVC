@@ -100,7 +100,7 @@ class Controller
     protected static function showPage($pageFile, $message = null)
     {
         if ($message !== null) {
-            extract(array('message' => $message));
+            extract(array('message' => $message), EXTR_SKIP);
         }
         ob_start();
         include($pageFile);
